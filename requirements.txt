@@ -3,3 +3,4 @@ uvicorn
 fastapi
 numpy
 # Hello
+streamlit
