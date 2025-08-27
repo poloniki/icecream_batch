@@ -1,0 +1,27 @@
+name: Test the basic logic of the app
+
+on:
+  push:
+    branches:
+      ['master']
+  pull_request:
+    branches:
+      ['master']
+
+jobs:
+  test_logic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install all the things
+        run: pip install .
+
+      - name: Run the tests
+        run: pytest -v
