@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.get("/")
 def hellow_world():
-    return {"greeting": "hellow world"}
+    return {"greeting": "hellow world with the update"}
 
 
 @app.get("/predict")
